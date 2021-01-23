@@ -1,7 +1,7 @@
 #FirebaseRealtime-Regras 
 
 
-![](https://user-images.githubusercontent.com/65344982/105611622-28be4300-5d95-11eb-8aed-47a3981a8589.jpg)
+![](https://user-images.githubusercontent.com/65344982/105611826-7c7d5c00-5d96-11eb-8a6e-8097ce18fd27.jpg)
 
 Aqui estão algumas regras para o firebasa database. Para começar, vamos deixar uma regra inteira e imagens do banco de dados
 
