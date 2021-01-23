@@ -1,4 +1,8 @@
 #FirebaseRealtime-Regras 
+
+
+img src=”https://user-images.githubusercontent.com/65344982/105611622-28be4300-5d95-11eb-8aed-47a3981a8589.jpg”>
+
 Aqui estão algumas regras para o firebasa database. Para começar, vamos deixar uma regra inteira e imagens do banco de dados
 
 ```
