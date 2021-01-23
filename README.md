@@ -1,8 +1,11 @@
 #FirebaseRealtime-Regras 
 
-Aqui estão algumas regras para o firebasa database. Para começar, vamos deixar uma regra inteira e imagens do banco de dados
+Aqui estão algumas regras para o firebase database. Para começar, vamos deixar uma regra inteira e imagens do banco de dados em que as regras irão ser usadas
+
+
 
 ![](https://user-images.githubusercontent.com/65344982/105611826-7c7d5c00-5d96-11eb-8a6e-8097ce18fd27.jpg)
+
 
 
 ```
@@ -13,7 +16,9 @@ Aqui estão algumas regras para o firebasa database. Para começar, vamos deixar
 }
 ```
 
+
 Agora vamos ver como funciona cada parte dessas regras
+
 
 ```
 auth != null
