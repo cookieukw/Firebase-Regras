@@ -26,11 +26,15 @@ auth != null
 
 Verifica se o user está logado
 
+
+
 ```
 root.child('P').child(auth.uid).exists()
 ```
 
 Verifica se  a uid do usuario existe na key "P"
+
+
 
 ```
 root.child('P').child(auth.uid).child('status').val() != 'morto'"
@@ -38,8 +42,12 @@ root.child('P').child(auth.uid).child('status').val() != 'morto'"
 
 Verifica se o status do usuarios esta igual "morto"
 
+
+
 ```
 &&
 ```
 
 Tem o mesmo valor que "e",ou seja,para o usuario poder ler algo ,ele precisa estar logado,ter a sua uid na aba de usuarios(P) e nao pode ter o valor "morto" na key "status"
+
+
