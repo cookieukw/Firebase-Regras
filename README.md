@@ -9,7 +9,7 @@ Aqui estão algumas regras para o firebase database. Para começar, vamos deixar
 
 ```
  {"rules":{
-     ".read" : "auth != null && root.child('P').child(auth.uid).exists() && root.child('P').child(auth.uid).child('status').val() !='morto'",
+     ".read" : "auth != null && root.child('P').child(auth.uid).exists() && root.child('P').child(auth.uid).child('status').val() !='bloqueado'",
      ".write" : "true"
    }
 }
@@ -18,12 +18,12 @@ Aqui estão algumas regras para o firebase database. Para começar, vamos deixar
 
 Agora vamos ver como funciona cada parte dessas regras
 
-
+Verifica se o user está logado
 ```
 auth != null
 ```
 
-⬆️Verifica se o user está logado
+
 
 
 
