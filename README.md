@@ -18,7 +18,9 @@ Aqui estão algumas regras para o firebase database. Para começar, vamos deixar
 
 Agora vamos ver como funciona cada parte dessas regras
 
-Verifica se o user está logado
+
+
+<h1>Verifica se o user está logado</h1>
 ```
 auth != null
 ```
