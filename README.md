@@ -4,7 +4,7 @@ Aqui estão algumas regras para o firebase database. Para começar, vamos deixar
 
 
 
-![](https://user-images.githubusercontent.com/65344982/105611826-7c7d5c00-5d96-11eb-8a6e-8097ce18fd27.jpg)
+![fb](https://user-images.githubusercontent.com/65344982/145453337-baf96824-2ea5-4360-9e5c-7fe959940c2f.png)
 
 
 
