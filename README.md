@@ -21,34 +21,34 @@ Agora vamos ver como funciona cada parte dessas regras
 
 
 <h1>Verifica se o user está logado</h1>
+
 ```
 auth != null
 ```
 
 
 
-
+<h1>Verifica se  a uid do usuario existe na key "P"</h1>
 
 ```
 root.child('P').child(auth.uid).exists()
 ```
 
-⬆️Verifica se  a uid do usuario existe na key "P"
 
 
+<h1>Verifica se a key "status" do usuario não está igual "bloqueado"</h1>
 
 ```
-root.child('P').child(auth.uid).child('status').val() != 'morto'"
+root.child('P').child(auth.uid).child('status').val() != 'bloqueado'"
 ```
 
-⬆️Verifica se a key "status" do usuario não está igual "morto"
+<h1>
+Tem o mesmo valor que "e",ou seja,para o usuario poder ler algo ,ele precisa estar logado,ter a sua uid na aba de usuarios(P) e nao pode ter o valor "morto" na key "status"
 
-
+Quanto a regra de escrever, está aberta e qualquer pessoa pode escrever dados sem logar-se ou qualquer tipo de autenticação
+</h1>
 
 ```
 &&
 ```
 
-⬆️Tem o mesmo valor que "e",ou seja,para o usuario poder ler algo ,ele precisa estar logado,ter a sua uid na aba de usuarios(P) e nao pode ter o valor "morto" na key "status"
-
-Quanto a regra de escrever, está aberta e qualquer pessoa pode escrever dados sem logar-se ou qualquer tipo de autenticação
