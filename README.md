@@ -28,30 +28,30 @@ auth != null
 
 
 
-<h1>Verifica se  a uid do usuario existe na key "P"</h1>
+<h4>Verifica se  a uid do usuario existe na key "P"</h4>
 
 ```
 root.child('P').child(auth.uid).exists()
 ```
 
 
-<h1>Verifica se a key "status" do usuario não está igual "bloqueado"</h1>
+<h4>Verifica se a key "status" do usuario não está igual "bloqueado"</h4>
 
 ```
 root.child('P').child(auth.uid).child('status').val() != 'bloqueado'"
 ```
 
-<h1>
+<h4>
 Tem o mesmo valor que "e",ou seja,para o usuario poder ler algo ,ele precisa estar logado,ter a sua uid na aba de usuarios(P) e nao pode ter o valor "morto" na key "status"
 
 Quanto a regra de escrever, está aberta e qualquer pessoa pode escrever dados sem logar-se ou qualquer tipo de autenticação
-</h1>
+</h4>
 
 ```
 &&
 ```
 
-<h1> Agora, vamos aprender a como verificar dados, nossas regras agora são:</h1>
+<h4> Agora, vamos aprender a como verificar dados, nossas regras agora são:</h4>
 
 ```
  {"rules":{
@@ -64,7 +64,7 @@ Quanto a regra de escrever, está aberta e qualquer pessoa pode escrever dados s
 }
 ```
 
-<h1>Agora temos o ````.validate.```, ele é uma regra assim como write e read, a função dele é  justamente fazer a validação dos dados. Nós também acrescentamos o child "P" e movemos a regra de read para ela. Então, todas as regras que entrarem dentro de "P" servirá apenas para esse child. Já as nossas regras de antes, deixam as regras como globais independente dos childs.</h1>
+<h4>Agora temos o ````.validate.```, ele é uma regra assim como write e read, a função dele é  justamente fazer a validação dos dados. Nós também acrescentamos o child "P" e movemos a regra de read para ela. Então, todas as regras que entrarem dentro de "P" servirá apenas para esse child. Já as nossas regras de antes, deixam as regras como globais independente dos childs.</h4>
 
 ```
 /**
@@ -93,8 +93,8 @@ Regras que funcionam apenas no child "P" enquanto que a leitura do nosso banco d
 }
 ```
 
-<h1>Agora como nós acrescentamos um child e movemos as regras para ele, vamos fazer algumas alterações na regra validate.
-Você pode notar que ali dentro da regra tem 3 locais para colocar, isso é uma array e pode variar de acordo com seu servidor. vamos preencher elas com nossas chaves</h1>
+<h4>Agora como nós acrescentamos um child e movemos as regras para ele, vamos fazer algumas alterações na regra validate.
+Você pode notar que ali dentro da regra tem 3 locais para colocar, isso é uma array e pode variar de acordo com seu servidor. vamos preencher elas com nossas chaves</h4>
 
 ```
 /** 
@@ -114,8 +114,8 @@ Depois
  
 ```
 
-<h1>Então, a partir de agora so podemos gravar dados no child "P" se ele houver as chaves "nome","status" e "user".
-Agora, vamos criar outro child dentro de "P". O nome pode ser qualquer um, e lembre-se de acrescentar "$" antes do nome. Isso significa que estamos nos referindo aos childs dentro de "P", que no caso são "uid1" e "uid2"(e as regras dentro desse child se referem apenas a esses childs)</h1>
+<h4>Então, a partir de agora so podemos gravar dados no child "P" se ele houver as chaves "nome","status" e "user".
+Agora, vamos criar outro child dentro de "P". O nome pode ser qualquer um, e lembre-se de acrescentar "$" antes do nome. Isso significa que estamos nos referindo aos childs dentro de "P", que no caso são "uid1" e "uid2"(e as regras dentro desse child se referem apenas a esses childs)</h4>
 
 ```
 /**
@@ -138,7 +138,7 @@ Regras que funcionam apenas no child "P" enquanto que a leitura do nosso banco d
 }
 ```
 
-<h1>Nas regras acima, estamos validandos os dados que estao em Base/P/UID/, ou seja:</h1>
+<h4>Nas regras acima, estamos validandos os dados que estao em Base/P/UID/, ou seja:</h4>
 
 ```
 uid1 
@@ -151,9 +151,9 @@ uid2
    --- status
    --- user
 ```
-<h1>Agora, como iremos fazer para verificar o valor de uma dessas chaves? como por exemplo, verificar se o child "uid" dentro de P/uid1 corresponde exatamente a sua uid? 
+<h4>Agora, como iremos fazer para verificar o valor de uma dessas chaves? como por exemplo, verificar se o child "uid" dentro de P/uid1 corresponde exatamente a sua uid? 
 Neste caso, usando nossas regras atualmente você pode postar exatamente como deve ser nas regras mas ainda é posssível postar dados como se fosse outro usuário e isso não seria legal. Isso é simples de consertar. nNas regras, basta usar a variável $uids. lembra que eu disse que isso seria basicamente os childs dentro de "P"?
-Então vamos fazer assim: </h1>
+Então vamos fazer assim: </h4>
 
 ```
 /**
@@ -181,11 +181,11 @@ Regras que funcionam apenas no child "P" enquanto que a leitura do nosso banco d
 }
 ```
 
-<h1>Mas... e se tivermos um child chamado "post" e os childs dentro deles forem gerados aleatoriamente? já que se fosse uma única id, os dados atuais dela seriam trocados pelos novos
+<h4>Mas... e se tivermos um child chamado "post" e os childs dentro deles forem gerados aleatoriamente? já que se fosse uma única id, os dados atuais dela seriam trocados pelos novos
 
 Isso também é simples de resolver
 
-Usamos ```newData``` como função justamente para verificar dados novos, você também pode usar ```data``` mas logicamente, essa função verifica os dados já existentes no banco de dados e usamos child para pegar o child de dentro .</h1>
+Usamos ```newData``` como função justamente para verificar dados novos, você também pode usar ```data``` mas logicamente, essa função verifica os dados já existentes no banco de dados e usamos child para pegar o child de dentro .</h4>
 
 ```
 
@@ -204,7 +204,7 @@ Agora essa regra verifica se o valor de uid na hora de criar os dados é a mesma
 **/
 ```
 
-<h1>Chegamos no fim e as nossas regras ficaram assim:</h1>
+<h4>Chegamos no fim e as nossas regras ficaram assim:</h4>
 
 ```
 /**
