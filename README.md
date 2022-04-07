@@ -20,7 +20,7 @@ Agora vamos ver como funciona cada parte dessas regras
 
 
 
-<h1>Verifica se o user está logado</h1>
+<h3>Verifica se o user está logado</h3>
 
 ```
 auth != null
